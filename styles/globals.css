@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --main-color:#009688;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100vw;  
+  height: 100vh;
+  overflow: hidden;
 }
 
 a {
@@ -12,5 +17,64 @@ a {
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  color: #e3e3e3;
+  font-family: "Montserrat", sans-serif;
+  /* outline: 1px solid red; */
+}
+#__next {  
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#logo {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--main-color);
+}
+nav>ul>li{
+  display: inline-block;
+  list-style: none;
+}
+nav>ul>li>a{
+  padding: 10px 20px;
+  text-decoration: none;
+}
+nav>ul>li>a:hover{
+  color: var(--main-color);
+}
+
+main {
+  background-image: url('/images/bg.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  left: 30px;
+  bottom: 50px;
+}
+
+.social-icon {
+  font-size: 6px;
 }
