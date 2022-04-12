@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Aside from "./aside"
 import Header from "./header"
+import PageIndicator from "./page-indicator"
 
 export default function Layout({ children }) {
     return (
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
             <main>
                 <Aside />
                 {children}
+                <PageIndicator />
             </main>
         </>
     )

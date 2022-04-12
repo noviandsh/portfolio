@@ -20,7 +20,7 @@ a {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #e3e3e3;
+  color: #bfbfbf;
   font-family: "Montserrat", sans-serif;
   /* outline: 1px solid red; */
 }
@@ -37,7 +37,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 50px;
+  margin-top: 20px;
+  z-index: 999;
 }
 #logo {
   font-size: 40px;
@@ -52,8 +54,9 @@ nav>ul>li>a{
   padding: 10px 20px;
   text-decoration: none;
 }
-nav>ul>li>a:hover{
+nav>ul>li>a:hover, nav>ul>li>a.active{
   color: var(--main-color);
+  font-weight: 600;
 }
 
 main {
@@ -62,17 +65,16 @@ main {
   height: 100%;
   background-size: cover;
   background-position: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 80px 0;
 }
 
 aside {
   position: absolute;
   width: 30px;
   height: 100px;
-  left: 15px;
-  bottom: 90px;
+  left: 20px;
+  bottom: 100px;
+  z-index: 999;
 }
 aside>ul>li{
   list-style: none;
@@ -87,4 +89,48 @@ aside>ul>li>a svg{
 }
 aside>ul>li>a:hover svg{
   transform: translateX(10px);
+}
+
+#greeting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.8em;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: -40px;
+}
+#greeting>span{
+  margin-left: 3px;
+}
+#greeting>h1 {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+#page-indicator {
+  position: absolute;
+  text-align: right;
+  right: 40px;
+  bottom: 30px;
+  z-index: 999;
+}
+
+#page-indicator>ul{
+  list-style: none;
+}
+#page-indicator>ul>li{
+  margin-bottom: 20px;
+}
+#page-indicator>ul>li>a{
+  border-right: 3px solid var(--main-color);
+  padding: 5px 10px;
+  transition: border .2s;
+}
+#page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
+  border-right-width: 6px;
 }
