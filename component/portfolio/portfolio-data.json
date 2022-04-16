@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "name": "Badokan",
+            "stack": ["ReactJs", "NextJs"],
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
+            "link": null,
+            "demo": "https://badokan.vercel.app/",
+            "github": "https://github.com/noviandsh/badokan-react",
+            "images": ["./project/badokan_1.png", "./project/badokan_2.png", "./project/badokan_3.png", "./project/badokan_4.png", "./project/badokan_5.png"] 
+        },
+        {
+            "name": "Kuis Algoritma Pemrograman",
+            "stack": ["Codeigniter", "jQuery", "GOjs"],
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
+            "link": "#",
+            "demo": null,
+            "github": "#",
+            "images": ["./project/kalpro_1.png", "./project/kalpro_2.png", "./project/kalpro_3.png", "./project/kalpro_4.png"] 
+        },
+        {
+            "name": "Website SMAK Yos Sudarso Batu",
+            "stack": ["Codeigniter", "jQuery", "GOjs"],
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
+            "link": "https://smakyossudarsobatu.sch.id/",
+            "demo": null,
+            "github": null,
+            "images": ["./project/smak_1.png", "./project/smak_2.png", "./project/smak_3.png"] 
+        },
+        {
+            "name": "Website Sales Daihatsu Malang",
+            "stack": ["Codeigniter", "jQuery", "GOjs"],
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
+            "link": "https://halodaihatsumalang.com/",
+            "demo": null,
+            "github": null,
+            "images": ["./project/daihatsu_1.png", "./project/daihatsu_2.png", "./project/daihatsu_3.png", "./project/daihatsu_4.png"] 
+        }
+    ]
+}
