@@ -65,7 +65,7 @@ main {
   height: 100%;
   background-size: cover;
   background-position: right;
-  padding: 100px 80px 0;
+  padding: 130px 80px 0;
 }
 
 aside {
@@ -127,10 +127,184 @@ aside>ul>li>a:hover svg{
   margin-bottom: 20px;
 }
 #page-indicator>ul>li>a{
-  border-right: 3px solid var(--main-color);
+  border-right: 2px solid var(--main-color);
   padding: 5px 10px;
   transition: border .2s;
 }
 #page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
   border-right-width: 6px;
+}
+
+#portfolios{
+  height: 95%;
+}
+
+#portfolio-view{
+  display: flex;
+  justify-content: center;
+  height: 65%;
+  margin-bottom: 35px;
+}
+#project-card{
+  position: absolute;
+  background: #1a2232;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 0 16px 0px rgb(0 0 0);
+}
+#project-card.zoom{
+  flex-direction: row;
+  height: 94%;
+  inset: 30px;
+  z-index: 9999;
+  transition: inset .5s;
+}
+#project-card.zoom>img{
+  cursor: unset;
+  width: 60%;
+  height: 90%;
+  object-fit: contain;
+}
+#project-card>img{
+  height: 80%;
+  cursor: zoom-in;
+}
+#project-card>#close-btn{
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  font-size: 2em;
+  cursor: pointer;
+  top: 10px;
+  right: 20px;
+}
+#project-detail{
+}
+#project-detail.zoom{
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#project-info {
+  max-height: 65%;
+}
+#project-description {
+  max-height: 100%;
+  overflow-y: scroll;
+  direction: rtl;
+  padding: 10px;
+  margin-top: 15px;
+}
+#project-description>p {
+  direction: ltr;
+}
+#project-description::-webkit-scrollbar {
+  width: 8px;
+  background-color: #111111;
+}
+#project-description::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+#project-stack{
+  margin-top: 15px;
+}
+.project-link {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  padding: 5px 20px;
+  margin: 15px 15px 0 0;
+}
+
+.project-button{
+  background-color: #1a2232;
+  border: 0;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: font-size .2s;
+}
+.project-button:hover{
+  font-size: 20px;
+}
+.project-button.left{
+  left: -30px;
+  box-shadow: -3px 0 11px 0px rgb(0 0 0);
+}
+.project-button.left::after{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 40px;
+  position: absolute;
+  background: #1a2232;
+  right: -10px;
+  top: 0;
+}
+.project-button.right{
+  right: -30px;
+  box-shadow: 3px 0 11px 0px rgb(0 0 0);
+}
+.project-button.right::after{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 40px;
+  position: absolute;
+  background: #1a2232;
+  left: -10px;
+  top: 0;
+}
+
+#image-list{
+  width: 85%;
+  height: 25%;
+  /* outline: 1px solid red; */
+  background-color: #1a2232;
+  overflow-x: scroll;
+  padding: 20px 0;
+  margin: 0 auto;
+  box-shadow: 0 0 16px 0px rgb(0 0 0);
+}
+#image-list::-webkit-scrollbar {
+  height: 8px;
+  background-color: #111111;
+}
+
+#image-list::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+#image-list>ul{ 
+  height: 100%;
+  list-style: none;
+  white-space: nowrap;
+}
+#image-list>ul>li{
+  height: 100%;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#image-list>ul>li:first-child{
+  margin-left: 20px;
+}
+#image-list>ul>li>img{
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+#image-list.zoom{
+  width: 95%;
+  margin: 0;
 }
