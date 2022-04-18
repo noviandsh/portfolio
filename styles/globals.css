@@ -2,6 +2,7 @@
 
 :root {
   --main-color:#009688;
+  --sub-color:#1a212e;
 }
 
 html,
@@ -240,6 +241,7 @@ aside>ul>li>a:hover svg{
 .project-button.left{
   left: -30px;
   box-shadow: -3px 0 11px 0px rgb(0 0 0);
+  border-radius: 5px 0 0 5px;
 }
 .project-button.left::after{
   content: '';
@@ -254,6 +256,7 @@ aside>ul>li>a:hover svg{
 .project-button.right{
   right: -30px;
   box-shadow: 3px 0 11px 0px rgb(0 0 0);
+  border-radius: 0 5px 5px 0;
 }
 .project-button.right::after{
   content: '';
@@ -353,12 +356,6 @@ aside>ul>li>a:hover svg{
   max-width: 1366px;
   margin: 0 auto;
 }
-
-#my-photo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 #about-description {
   display: flex;
   flex-direction: column;
@@ -366,6 +363,39 @@ aside>ul>li>a:hover svg{
   align-items: flex-start;
   margin: -100px 25px 0 25px;
   gap: 10px;
+}
+#skill-list{
+  margin-top: 10px;
+}
+#skill-list>ul{
+  list-style: none;
+}
+#skill-list>ul>li{
+  position: relative;
+  display: inline-block;
+  background-color: var(--main-color);
+  padding: 3px 5px;
+  margin-top: 10px;
+  color: var(--sub-color);
+  font-weight: 600;
+}
+#skill-list>ul>li::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 25px;
+  background-color: var(--main-color);
+  top: 0;
+  left: -10px;
+}
+#skill-list>ul>li{
+  margin-left: 10px;
+}
+#my-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .image-cut{
   position: absolute;

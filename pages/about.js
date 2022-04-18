@@ -30,8 +30,24 @@ export default function About() {
             <div id="about-container">
                 <motion.div initial="initialSlideRight" animate="animateSlideRight" variants={variants(.2)} id='about-description'>
                     <h1>About me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sit dolorem. Animi praesentium odit sunt? Ab veniam amet maxime, aliquam non iure quas dignissimos recusandae voluptatem, reprehenderit, ullam illum eius?</p>
-                    <a href='#' className='styled-btn'>Download CV <FontAwesomeIcon icon={faDownload} /></a>
+                    <p>Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. You can call me Rizal. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things.</p>
+                    <div id="skill-list">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Kotlin</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>Codeigniter 3</li>
+                            <li>NodeJs</li>
+                            <li>ReactJs</li>
+                            <li>NextJs</li>
+                            <li>ExpressJs</li>
+                        </ul>
+                    </div>
+                    <a href='#' className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
                 </motion.div>
                 <div id='my-photo'>
                     <motion.div initial="initialSlideUp" animate="animateSlideUp" variants={variants(.4)} id="photo-circle">
