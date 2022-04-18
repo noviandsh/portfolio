@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "name": "Badokan",
+            "name": "Website Badokan",
             "stack": ["ReactJs", "NextJs"],
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
             "link": null,
@@ -35,6 +35,15 @@
             "demo": null,
             "github": null,
             "images": ["./project/daihatsu_1.png", "./project/daihatsu_2.png", "./project/daihatsu_3.png", "./project/daihatsu_4.png"] 
+        },
+        {
+            "name": "Badokan Android App",
+            "stack": ["Kotlin"],
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse rerum ipsam iusto excepturi ex officiis assumenda veniam, nisi, accusamus necessitatibus possimus quas minima eum! Necessitatibus non quisquam quaerat magnam voluptates?",
+            "link": null,
+            "demo": "https://badokan.vercel.app/",
+            "github": "https://github.com/noviandsh/badokan-react",
+            "images": ["./project/badokan_app_1.jpg", "./project/badokan_app_2.jpg", "./project/badokan_app_3.jpg"] 
         }
     ]
 }
