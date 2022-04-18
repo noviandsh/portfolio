@@ -15,7 +15,7 @@ export default function Header() {
                     <li><Link href="/about"><a className={setActiveLink('/about')}>About</a></Link></li>
                     <li><Link href="/portfolio"><a className={setActiveLink('/portfolio')}>Portfolio</a></Link></li>
                     <li><Link href="/contact"><a className={setActiveLink('/contact')}>Contact</a></Link></li>
-                    <li><Link href="https://doyancoding.com" target="_blank"><a>Blog</a></Link></li>
+                    <li><Link href="https://doyancoding.com"><a target="_blank">Blog</a></Link></li>
                 </ul>
             </nav>
         </header>
