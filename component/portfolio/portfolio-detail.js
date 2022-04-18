@@ -19,9 +19,9 @@ export default function PortfolioDetail({ project }) {
                 }
             </div>
             <div id="project-link">
-                {project.github && <a href={project.github} className="project-link" target="_blank"><FontAwesomeIcon icon={faGithub} /> Github</a>}
-                {project.link && <a href={project.link} className="project-link" target="_blank"><FontAwesomeIcon icon={faLink} /> Visit</a>}
-                {project.demo && <a href={project.demo} className="project-link" target="_blank"><FontAwesomeIcon icon={faLink} /> Demo</a>}
+                {project.github && <a href={project.github} className="styled-btn" target="_blank">Github <FontAwesomeIcon icon={faGithub} /></a>}
+                {project.link && <a href={project.link} className="styled-btn" target="_blank">Visit <FontAwesomeIcon icon={faLink} /></a>}
+                {project.demo && <a href={project.demo} className="styled-btn" target="_blank">Demo <FontAwesomeIcon icon={faLink} /></a>}
             </div>
         </div>
     )
