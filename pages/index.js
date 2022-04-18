@@ -49,7 +49,7 @@ export default function Home() {
 		<Layout>
 			<div id='greeting'>
 				<AnimatePresence>
-					<motion.span key="greet" initial="hidden" animate="visible" variants={variants.span1}>Hi, i'm</motion.span>
+					<motion.span key="greet" initial="hidden" animate="visible" variants={variants.span1}>Hi, i&apos;m</motion.span>
 					<motion.h1 key="name" initial="hidden" animate="visible" exit="hidden" variants={variants.h1}>
 						Novian Dwi Syahrizal Hilmi.
 					</motion.h1>
