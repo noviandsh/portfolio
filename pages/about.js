@@ -5,6 +5,7 @@ import { faDownload, faCode } from '@fortawesome/free-solid-svg-icons'
 import { faReact, faNodeJs, faAndroid } from '@fortawesome/free-brands-svg-icons'
 
 export default function About() {
+    const cvLink = "#"
     const variants = (delay) => ({
         initialZoom: {
             opacity: 0, scale: .1
@@ -47,7 +48,7 @@ export default function About() {
                             <li>ExpressJs</li>
                         </ul>
                     </div>
-                    <a href='#' className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
+                    <a href={cvLink} className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
                 </motion.div>
                 <div id='my-photo'>
                     <motion.div initial="initialSlideUp" animate="animateSlideUp" variants={variants(.4)} id="photo-circle">
