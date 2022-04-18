@@ -12,7 +12,7 @@ export default function Contact() {
                     <p>If you wanna talk about work or just wanna talk with me, please contact me on Email or Telegram below.</p>
                     <div id="contact-link">
                         <a href="mailto:noviandwish@gmail.com" className="styled-btn">noviandwish@gmail.com <FontAwesomeIcon icon={faEnvelope} /></a>
-                        <a href="https://t.me/noviandsh" target="_blank" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
+                        <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
                     </div>
                 </div>
                 <div id="contact-form">
