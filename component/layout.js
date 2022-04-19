@@ -27,7 +27,7 @@ export default function Layout({ children }) {
                 <meta property="twitter:url" content="https://noviandsh.com/" />
                 <meta name="twitter:title" content="Novian D Syahrizal - Frontend Dev" />
                 <meta name="twitter:description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
-                <meta name="twitter:image" content="/images/thumb.png"></meta>
+                <meta name="twitter:image:src" content="/images/thumb.png"></meta>
 
                 <link rel="icon" href="/images/logo.png" />
             </Head>
