@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function ImageList(props) {
-    // props.handleItemClick(3)
     return (
         <motion.div
             className={props.className}
@@ -14,13 +14,13 @@ export default function ImageList(props) {
                     props.detail ?
                         props.projects[props.projectIndex].images.map((image, i) => (
                             <li key={i}>
-                                <img onClick={() => props.handleItemClick(i)} src={image} />
+                                <Image layout='fill' objectFit='cover' objectPosition='top' onClick={() => props.handleItemClick(i)} src={image} />
                             </li>
                         ))
                         :
                         props.projects.map((project, i) => (
                             <li key={i}>
-                                <img onClick={() => props.handleItemClick(i)} src={project.images[0]} alt={`User interface ${project.name}`} />
+                                <Image layout='fill' objectFit='cover' objectPosition='top' onClick={() => props.handleItemClick(i)} src={project.images[0]} alt={`User interface ${project.name}`} />
                             </li>
                         ))
                 }

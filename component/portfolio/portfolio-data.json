@@ -7,7 +7,7 @@
             "link": null,
             "demo": "https://badokan.vercel.app/",
             "github": "https://github.com/noviandsh/badokan-react",
-            "images": ["./project/badokan_1.png", "./project/badokan_2.png", "./project/badokan_3.png", "./project/badokan_4.png", "./project/badokan_5.png"] 
+            "images": ["/project/badokan_1.png", "/project/badokan_2.png", "/project/badokan_3.png", "/project/badokan_4.png", "/project/badokan_5.png"] 
         },
         {
             "name": "Website Badokan (NodeJS)",
@@ -16,7 +16,7 @@
             "link": null,
             "demo": "https://badokan.herokuapp.com/",
             "github": "https://github.com/noviandsh/Badokan-web",
-            "images": ["./project/badokan_1.png", "./project/badokan_2.png", "./project/badokan_3.png", "./project/badokan_4.png", "./project/badokan_5.png"] 
+            "images": ["/project/badokan_1.png", "/project/badokan_2.png", "/project/badokan_3.png", "/project/badokan_4.png", "/project/badokan_5.png"] 
         },
         {
             "name": "Kuis Algoritma Pemrograman",
@@ -25,7 +25,7 @@
             "link": null,
             "demo": null,
             "github": "https://github.com/noviandsh/kalpro",
-            "images": ["./project/kalpro_1.png", "./project/kalpro_2.png", "./project/kalpro_3.png", "./project/kalpro_4.png"] 
+            "images": ["/project/kalpro_1.png", "/project/kalpro_2.png", "/project/kalpro_3.png", "/project/kalpro_4.png"] 
         },
         {
             "name": "Website SMAK Yos Sudarso Batu",
@@ -34,7 +34,7 @@
             "link": "https://smakyossudarsobatu.sch.id/",
             "demo": null,
             "github": null,
-            "images": ["./project/smak_1.png", "./project/smak_2.png", "./project/smak_3.png"] 
+            "images": ["/project/smak_1.png", "/project/smak_2.png", "/project/smak_3.png"] 
         },
         {
             "name": "Website Sales Daihatsu Malang",
@@ -43,7 +43,7 @@
             "link": "https://halodaihatsumalang.com/",
             "demo": null,
             "github": null,
-            "images": ["./project/daihatsu_1.png", "./project/daihatsu_2.png", "./project/daihatsu_3.png", "./project/daihatsu_4.png"] 
+            "images": ["/project/daihatsu_1.png", "/project/daihatsu_2.png", "/project/daihatsu_3.png", "/project/daihatsu_4.png"] 
         },
         {
             "name": "Badokan Android App",
@@ -52,7 +52,7 @@
             "link": null,
             "demo": "https://drive.google.com/file/d/1414setyIAssPgYK6BivGWYH4oo_bmYQO/view?usp=sharing",
             "github": "https://github.com/noviandsh/badokan-app",
-            "images": ["./project/badokan_app_1.jpg", "./project/badokan_app_2.jpg", "./project/badokan_app_3.jpg"] 
+            "images": ["/project/badokan_app_1.jpg", "/project/badokan_app_2.jpg", "/project/badokan_app_3.jpg"] 
         }
     ]
 }

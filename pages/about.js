@@ -1,4 +1,5 @@
 import Layout from '../component/layout'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faCode } from '@fortawesome/free-solid-svg-icons'
@@ -57,7 +58,9 @@ export default function About() {
                         <motion.div initial="initialZoom" animate="animateZoom" variants={variants(1.1)} className="circle-skils"><FontAwesomeIcon icon={faNodeJs} /></motion.div>
                         <motion.div initial="initialZoom" animate="animateZoom" variants={variants(1.3)} className="circle-skils"><FontAwesomeIcon icon={faAndroid} /></motion.div>
                         <div className='image-cut'>
-                            <motion.img initial="initialZoom" animate="animateZoom" variants={variants(.6)} src="/images/me_sm.png" alt="" />
+                            <motion.div initial="initialZoom" animate="animateZoom" variants={variants(.6)}>
+                                <Image src="/images/me_sm.png" layout='fill' objectFit='contain'></Image>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

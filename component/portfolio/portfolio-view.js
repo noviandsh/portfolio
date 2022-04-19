@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { faAngleLeft, faAngleRight, faClose } from "@fortawesome/free-solid-svg-icons"
@@ -69,7 +70,9 @@ export default function PortfolioView(props) {
                                 <strong>{projects[index].name}</strong>
                         }
                     </div>
-                    <motion.img key={imageIndex} initial="initialZoom" animate="animateZoom" variants={variants} onClick={handleCardClick} src={projects[index].images[imageIndex]} alt={`User interface ${projects[index].name}`} />
+                    <motion.div id="project-image" key={imageIndex} initial="initialZoom" animate="animateZoom" variants={variants} >
+                        <Image layout="fill" objectFit="contain" onClick={handleCardClick} src={projects[index].images[imageIndex]} alt={`User interface ${projects[index].name}`} />
+                    </motion.div>
                     {!isViewZoom && <div className="project-stack">{projects[index].stack.map((stack, i) => ((i ? ', ' : '') + stack))}</div>}
 
                     {!isViewZoom && <button onClick={() => props.handleItemClick(index - 1)} className="project-button left"><FontAwesomeIcon icon={faAngleLeft} /></button>}
