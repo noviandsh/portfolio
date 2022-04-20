@@ -40,6 +40,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 999;
+  transition: .5s transform;
 }
 #hamburger {
   height: 50px;
@@ -54,7 +55,6 @@ header {
   background: transparent;
   border: 0;
   cursor: pointer;
-  transition: .5s transform;
 }
 
 #hamburger>span, #hamburger>span::before, #hamburger>span::after {
@@ -101,7 +101,6 @@ header {
   font-size: 40px;
   font-weight: 300;
   color: var(--main-color);
-  transition: .5s transform;
 }
 nav.phone{
   position: absolute;
@@ -110,9 +109,6 @@ nav.phone{
   z-index: 1;
   text-align: right;
   font-size: 1.3em;
-}
-nav.phone.open{
-  z-index: 9999;
 }
 nav.phone>ul>li{
   list-style: none;
@@ -145,7 +141,7 @@ main {
   box-shadow: 5px -3px 20px 0px black;
   transition: .5s transform;
 }
-main.nav-open, #hamburger.open, #logo.open{
+main.nav-open, header.nav-open{
   transform: translate(-200px, 20px);
 }
 

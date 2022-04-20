@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import Nav from "./nav"
 
-export default function Header({ handleNavOpen }) {
+export default function Header({ handleNavOpen, className }) {
     const [isNavOpen, setIsNavOpen] = useState(false)
 
     useEffect(() => {
@@ -15,8 +15,8 @@ export default function Header({ handleNavOpen }) {
     }
 
     return (
-        <header>
-            <div className={isNavOpen ? "open" : ""} id="logo">&lt;NDSH/&gt;</div>
+        <header className={className}>
+            <div id="logo">&lt;NDSH/&gt;</div>
             <button className={isNavOpen ? "open" : ""} onClick={handleHamburgerClick} id="hamburger" aria-label="Menu navigasi"><span></span></button>
             <Nav className="main" />
         </header>

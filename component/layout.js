@@ -38,8 +38,8 @@ export default function Layout({ children }) {
 
                 <link rel="icon" href="/images/logo.png" />
             </Head>
-            <Nav className={isNavOpen ? "phone open" : "phone"} />
-            <Header handleNavOpen={handleNavOpen} />
+            <Nav className="phone" />
+            <Header className={isNavOpen ? "nav-open" : ""} handleNavOpen={handleNavOpen} />
             <main className={isNavOpen ? "nav-open" : ""}>
                 <Aside />
                 {children}
