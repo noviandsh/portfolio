@@ -3,11 +3,18 @@ import Aside from "./aside"
 import Header from "./header"
 import PageIndicator from "./page-indicator"
 import { useRouter } from "next/router"
+import { useState } from "react"
+import Link from "next/link"
+import Nav from "./nav"
 
 export default function Layout({ children }) {
+    const [isNavOpen, setIsNavOpen] = useState(false)
     const router = useRouter()
     const capitalizeFirstChar = (string) => string.charAt(0).toUpperCase() + string.slice(1)
     const pageName = router.pathname.substring(1) || 'home'
+    const handleNavOpen = (isOpen) => {
+        setIsNavOpen(isOpen)
+    }
     return (
         <>
             <Head>
@@ -31,8 +38,9 @@ export default function Layout({ children }) {
 
                 <link rel="icon" href="/images/logo.png" />
             </Head>
-            <Header />
-            <main>
+            <Nav className={isNavOpen ? "phone open" : "phone"} />
+            <Header handleNavOpen={handleNavOpen} />
+            <main className={isNavOpen ? "nav-open" : ""}>
                 <Aside />
                 {children}
                 <PageIndicator />

@@ -10,6 +10,7 @@ body {
   width: 100vw;  
   height: 100vh;
   overflow: hidden;
+  background-color: #0f1520;
 }
 
 a {
@@ -53,6 +54,7 @@ header {
   background: transparent;
   border: 0;
   cursor: pointer;
+  transition: .5s transform;
 }
 
 #hamburger>span, #hamburger>span::before, #hamburger>span::after {
@@ -82,11 +84,6 @@ header {
   transform-origin: left;
 }
 
-#hamburger.open {
-  margin-right: 170px;
-  position: fixed;
-}
-
 #hamburger.open span {
   background-color: transparent;
 }
@@ -104,11 +101,27 @@ header {
   font-size: 40px;
   font-weight: 300;
   color: var(--main-color);
+  transition: .5s transform;
 }
-nav{
+nav.phone{
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+  text-align: right;
+  font-size: 1.3em;
+}
+nav.phone.open{
+  z-index: 9999;
+}
+nav.phone>ul>li{
+  list-style: none;
+  margin-bottom: 20px;
+}
+nav.main{
   display: none;
 }
-nav>ul>li{
+nav.main>ul>li{
   display: inline-block;
   list-style: none;
 }
@@ -121,12 +134,19 @@ nav>ul>li>a:hover, nav>ul>li>a.active{
 }
 
 main {
+  position: relative;
+  z-index: 10;
   background-image: url('/images/bg2.jpg');
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: right;
   padding: 80px 10px 30px;
+  box-shadow: 5px -3px 20px 0px black;
+  transition: .5s transform;
+}
+main.nav-open, #hamburger.open, #logo.open{
+  transform: translate(-200px, 20px);
 }
 
 aside {
@@ -651,7 +671,7 @@ main::after{
     margin-top: 20px;
     padding: 0 50px;
   }
-  nav{
+  nav.main{
     display: block;
   }
   #hamburger{
