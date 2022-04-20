@@ -18,7 +18,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Head>
-                <title>{capitalizeFirstChar(pageName)} | Novian D Syahrizal</title>
+                <title>{capitalizeFirstChar(pageName)} - Novian D Syahrizal</title>
                 <meta name="description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
 
                 {/* Facebook Meta Tags */}
