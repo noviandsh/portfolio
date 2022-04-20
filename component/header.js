@@ -9,6 +9,7 @@ export default function Header() {
     return (
         <header>
             <div id="logo">&lt;NDSH/&gt;</div>
+            <button id="hamburger" aria-label="Menu navigasi"><span></span></button>
             <nav>
                 <ul>
                     <li><Link href="/"><a className={setActiveLink('/')}>Home</a></Link></li>

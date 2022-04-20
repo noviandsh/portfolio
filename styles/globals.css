@@ -38,14 +38,75 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  margin-top: 20px;
   z-index: 999;
+}
+#hamburger {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  padding-top: 11px;
+  z-index: 2;
+  transition: margin .5s;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#hamburger>span, #hamburger>span::before, #hamburger>span::after {
+  display: block;
+  background-color: #bfbfbf;
+  height: 4px;
+  transition: all .5s;
+}
+
+#hamburger>span {
+  position: relative;
+}
+
+#hamburger>span::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  width: 30px;
+  transform-origin: left;
+}
+
+#hamburger>span::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 30px;
+  transform-origin: left;
+}
+
+#hamburger.open {
+  margin-right: 170px;
+  position: fixed;
+}
+
+#hamburger.open span {
+  background-color: transparent;
+}
+
+#hamburger.open span::before {
+  transform: rotateZ(45deg);
+  width: 34px;
+}
+
+#hamburger.open span::after {
+  transform: rotateZ(-45deg);
+  width: 34px;
 }
 #logo {
   font-size: 40px;
   font-weight: 300;
   color: var(--main-color);
+}
+nav{
+  display: none;
 }
 nav>ul>li{
   display: inline-block;
@@ -65,10 +126,11 @@ main {
   height: 100%;
   background-size: cover;
   background-position: right;
-  padding: 130px 80px 0;
+  padding: 80px 10px 30px;
 }
 
 aside {
+  display: none;
   position: absolute;
   width: 30px;
   height: 100px;
@@ -102,7 +164,7 @@ aside>ul>li>a:hover svg{
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  margin-top: -80px;
+  margin-top: -30px;
 }
 #greeting>span{
   margin-left: 3px;
@@ -115,24 +177,32 @@ aside>ul>li>a:hover svg{
 #page-indicator {
   position: absolute;
   text-align: right;
-  right: 40px;
-  bottom: 30px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
   z-index: 999;
+  /* outline: 1px solid red; */
 }
 
 #page-indicator>ul{
   list-style: none;
 }
 #page-indicator>ul>li{
-  margin-bottom: 20px;
+  display: inline-block;
+  width: 25%;
+}
+#page-indicator>ul>li:not(:last-child){
+  /* margin-right: 20px; */
 }
 #page-indicator>ul>li>a{
-  border-right: 2px solid var(--main-color);
+  display: block;
+  border-bottom: 2px solid var(--main-color);
   padding: 5px 10px;
+  margin: 0 5px;
   transition: border .2s;
 }
 #page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
-  border-right-width: 6px;
+  border-bottom-width: 6px;
 }
 
 #portfolios{
@@ -517,4 +587,84 @@ aside>ul>li>a:hover svg{
   background-color: var(--main-color);
   border-radius: 5px;
   cursor: pointer;
+}
+main::after{
+  /* content: '0'; */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0 10px;
+  }
+  #hamburger {
+    right: 10px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header {
+    padding: 0 20px;
+  }
+  #hamburger{
+    display: block;
+  }
+  aside{
+    display: block;
+  }
+  #page-indicator{
+    right: 40px;
+    bottom: 30px;
+    left: unset;
+  }
+  #page-indicator>ul>li{
+    display: block;
+    margin-bottom: 20px;
+    width: unset;
+  }
+  #page-indicator>ul>li>a{
+    display: unset;
+    border-right: 2px solid var(--main-color);
+    border-bottom: 0;
+    margin: 0;
+  }
+  #page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
+    border-right-width: 6px;
+  }
+  main{
+    padding: 130px 80px 0;
+  }
+  #greeting {
+    margin-top: -80px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    margin-top: 20px;
+    padding: 0 50px;
+  }
+  nav{
+    display: block;
+  }
+  #hamburger{
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
