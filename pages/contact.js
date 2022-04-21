@@ -1,7 +1,8 @@
 import Layout from "../component/layout";
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 
 export default function Contact() {
@@ -40,6 +41,11 @@ export default function Contact() {
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
                         <a href="mailto:noviandwish@gmail.com" className="styled-btn">noviandwish@gmail.com <FontAwesomeIcon icon={faEnvelope} /></a>
                         <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
+                        <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Github <FontAwesomeIcon icon={faGithub} /></a>
+                        <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Facebook <FontAwesomeIcon icon={faFacebookF} /></a>
+                        <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Twitter <FontAwesomeIcon icon={faTwitter} /></a>
+                        <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">LinkedIn <FontAwesomeIcon icon={faLinkedin} /></a>
+
                     </motion.div>
                 </div>
                 <motion.div id="contact-form" initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
