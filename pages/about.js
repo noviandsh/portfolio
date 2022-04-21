@@ -36,17 +36,17 @@ export default function About() {
                     <div id="skill-list">
                         <h2>Skills</h2>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                            <li>Kotlin</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                            <li>Codeigniter 3</li>
-                            <li>NodeJs</li>
-                            <li>ReactJs</li>
-                            <li>NextJs</li>
-                            <li>ExpressJs</li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Javascript</span></li>
+                            <li><span>Kotlin</span></li>
+                            <li><span>PHP</span></li>
+                            <li><span>MySQL</span></li>
+                            <li><span>Codeigniter 3</span></li>
+                            <li><span>NodeJs</span></li>
+                            <li><span>ReactJs</span></li>
+                            <li><span>NextJs</span></li>
+                            <li><span>ExpressJs</span></li>
                         </ul>
                     </div>
                     <a href={cvLink} className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
