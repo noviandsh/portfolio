@@ -740,6 +740,9 @@ main::after{
     width: 85%;
   }
   #image-list>ul>li{
+    width: 15%;
+  }
+  #image-list.zoom>ul>li{
     width: 40%;
   }
 }
