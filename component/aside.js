@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { faFacebookF, faTwitter, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 export default function Aside() {
     return (
@@ -22,8 +22,8 @@ export default function Aside() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/noviandsh/">
-                        <FontAwesomeIcon icon={faInstagram} size="xl" />
+                    <a href="https://www.linkedin.com/in/novian-dwi-syahrizal-hilmi/">
+                        <FontAwesomeIcon icon={faLinkedin} size="xl" />
                     </a>
                 </li>
             </ul>
