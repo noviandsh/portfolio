@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { useState } from "react";
+import { useState, createRef } from "react";
 import { send } from "emailjs-com"
 import { ReCAPTCHA } from "react-google-recaptcha";
 import Swal from "sweetalert2";
 
 export default function Contact() {
     const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
-    const [captchaVal, setCaptchaVal] = useState(null)
+    const recaptchaRef = createRef()
     const emailjs = {
         SERVICE_ID: "service_d3bxq4s",
         TEMPLATE_ID: "template_2mjgdtt",
@@ -49,7 +49,8 @@ export default function Contact() {
     })
     const handleFormSubmit = (e) => {
         e.preventDefault()
-        const params = { ...toSend, 'g-recaptcha-response': captchaVal }
+        const recaptchaValue = recaptchaRef.current.getValue()
+        const params = { ...toSend, 'g-recaptcha-response': recaptchaValue }
         if (toSend.from_name.trim() === "" || toSend.from_email.trim() === "" || toSend.message.trim() === "") {
             Swal.fire({
                 icon: 'error',
@@ -95,9 +96,6 @@ export default function Contact() {
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value })
     }
-    const handleCaptchaChange = (value) => {
-        setCaptchaVal(value)
-    }
     return (
         <Layout>
             <div id="contact-container">
@@ -139,9 +137,8 @@ export default function Contact() {
                             value={toSend.message}
                             onChange={handleChange} />
                         <ReCAPTCHA
-                            className="g-recaptcha"
-                            sitekey={siteKey}
-                            onChange={handleCaptchaChange} />
+                            ref={recaptchaRef}
+                            sitekey={siteKey} />
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
