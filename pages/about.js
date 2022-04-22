@@ -41,6 +41,7 @@ export default function About() {
                             <li><span>Javascript</span></li>
                             <li><span>Kotlin</span></li>
                             <li><span>PHP</span></li>
+                            <li><span>Git</span></li>
                             <li><span>MySQL</span></li>
                             <li><span>Codeigniter 3</span></li>
                             <li><span>NodeJs</span></li>
