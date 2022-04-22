@@ -39,7 +39,7 @@ export default function Contact() {
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
                     <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please contact me on Email or Telegram below.</motion.p>
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
-                        <a href="mailto:noviandwish@gmail.com" className="styled-btn">noviandwish@gmail.com <FontAwesomeIcon icon={faEnvelope} /></a>
+                        <a href="mailto:noviandsh@gmail.com" className="styled-btn">noviandsh@gmail.com <FontAwesomeIcon icon={faEnvelope} /></a>
                         <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
                         <a href="https://github.com/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Github <FontAwesomeIcon icon={faGithub} /></a>
                         <a href="https://www.facebook.com/noviandsh/" target="_blank" rel="noreferrer" className="styled-btn phone">Facebook <FontAwesomeIcon icon={faFacebookF} /></a>
