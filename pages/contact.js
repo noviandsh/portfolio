@@ -65,7 +65,8 @@ export default function Contact() {
                 }
             })
             send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, toSend, emailjs.PUBLIC_KEY)
-                .then(() => {
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
                         icon: 'success',
                         title: 'Message sent',
@@ -77,7 +78,8 @@ export default function Contact() {
                         message: ''
                     })
                 })
-                .catch(() => {
+                .catch((error) => {
+                    console.log('FAILED...', error);
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
