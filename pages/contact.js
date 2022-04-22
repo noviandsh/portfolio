@@ -3,9 +3,22 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-
+import { useState } from "react";
+import { send } from "emailjs-com"
+import Swal from "sweetalert2";
 
 export default function Contact() {
+    const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
+    const emailjs = {
+        SERVICE_ID: "service_d3bxq4s",
+        TEMPLATE_ID: "template_2mjgdtt",
+        PUBLIC_KEY: "TCru4-klmCI1H8254"
+    }
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        from_email: '',
+        message: ''
+    })
     const variants = (delay) => ({
         initialZoom: {
             opacity: 0, scale: .1
@@ -32,6 +45,51 @@ export default function Contact() {
             opacity: 1, y: 0, transition: { delay: delay }
         },
     })
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+        if (toSend.from_name.trim() === "" || toSend.from_email.trim() === "" || toSend.message.trim() === "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Make sure all fields are filled',
+                heightAuto: false,
+            })
+        } else {
+            Swal.fire({
+                title: 'Sending message...',
+                heightAuto: false,
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            })
+            send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, toSend, emailjs.PUBLIC_KEY)
+                .then(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Message sent',
+                        heightAuto: false,
+                    })
+                    setToSend({
+                        from_name: '',
+                        from_email: '',
+                        message: ''
+                    })
+                })
+                .catch(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Failed to send message',
+                        heightAuto: false,
+                    })
+                });
+        }
+    }
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value })
+    }
     return (
         <Layout>
             <div id="contact-container">
@@ -49,11 +107,31 @@ export default function Contact() {
                     </motion.div>
                 </div>
                 <motion.div id="contact-form" initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
-                    <form onSubmit={(e) => e.preventDefault()}>
-                        <input type="text" name="nama" id="name" placeholder="Name" />
-                        <input type="email" name="email" id="email" placeholder="Email" />
-                        <textarea type="message" name="message" id="message" rows={5} placeholder="Message" />
-                        <button className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
+                    <form onSubmit={handleFormSubmit}>
+                        <input
+                            type="text"
+                            name="from_name"
+                            id="name"
+                            placeholder="Name"
+                            value={toSend.from_name}
+                            onChange={handleChange} />
+                        <input
+                            type="email"
+                            name="from_email"
+                            id="email"
+                            placeholder="Email"
+                            value={toSend.from_email}
+                            onChange={handleChange} />
+                        <textarea
+                            type="message"
+                            name="message"
+                            id="message"
+                            rows={5}
+                            placeholder="Message"
+                            value={toSend.message}
+                            onChange={handleChange} />
+                        <div className="g-recaptcha" data-sitekey={siteKey}></div>
+                        <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
             </div>
