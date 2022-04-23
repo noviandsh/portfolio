@@ -3,15 +3,13 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com"
 import Swal from "sweetalert2";
-import Script from "next/script";
-import Recaptcha from 'react-recaptcha'
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
     const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
-    const recaptchaRef = useRef(null)
     const emailjs = {
         SERVICE_ID: "service_d3bxq4s",
         TEMPLATE_ID: "template_2mjgdtt",
@@ -20,7 +18,8 @@ export default function Contact() {
     const [toSend, setToSend] = useState({
         from_name: '',
         from_email: '',
-        message: ''
+        message: '',
+        'g-recaptcha-response': null
     })
     const variants = (delay) => ({
         initialZoom: {
@@ -48,10 +47,8 @@ export default function Contact() {
             opacity: 1, y: 0, transition: { delay: delay }
         },
     })
-    const handleFormSubmit = async (e) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault()
-        const recaptchaValue = await recaptchaRef.current.getValue()
-        const params = await { ...toSend, 'g-recaptcha-response': recaptchaValue }
         if (toSend.from_name.trim() === "" || toSend.from_email.trim() === "" || toSend.message.trim() === "") {
             Swal.fire({
                 icon: 'error',
@@ -59,7 +56,7 @@ export default function Contact() {
                 text: 'Make sure all fields are filled',
                 heightAuto: false,
             })
-        } else {
+        } else if (toSend['g-recaptcha-response']) {
             Swal.fire({
                 title: 'Sending message...',
                 heightAuto: false,
@@ -69,9 +66,8 @@ export default function Contact() {
                     Swal.showLoading()
                 }
             })
-            await send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, params, emailjs.PUBLIC_KEY)
+            send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, toSend, emailjs.PUBLIC_KEY)
                 .then((response) => {
-                    console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
                         icon: 'success',
                         title: 'Message sent',
@@ -84,7 +80,6 @@ export default function Contact() {
                     })
                 })
                 .catch((error) => {
-                    console.log('FAILED...', error);
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
@@ -92,17 +87,23 @@ export default function Contact() {
                         heightAuto: false,
                     })
                 });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Please complete captcha before sending message',
+                heightAuto: false,
+            })
         }
     }
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value })
     }
-    const verifyCallback = (response) => {
-        console.log(response);
+    const captchaChange = (val) => {
+        setToSend({ ...toSend, ['g-recaptcha-response']: val })
     }
     return (
         <Layout>
-            <Script src="https://www.google.com/recaptcha/api.js" async defer></Script>
             <div id="contact-container">
                 <div id="contact-detail">
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
@@ -141,9 +142,9 @@ export default function Contact() {
                             placeholder="Message"
                             value={toSend.message}
                             onChange={handleChange} />
-                        <Recaptcha
+                        <ReCAPTCHA
                             sitekey={siteKey}
-                            verifyCallback={verifyCallback} />
+                            onChange={captchaChange} />
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
