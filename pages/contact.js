@@ -5,9 +5,9 @@ import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-ic
 import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { useState, useRef } from "react";
 import { send } from "emailjs-com"
-import { ReCAPTCHA } from "react-google-recaptcha";
 import Swal from "sweetalert2";
 import Script from "next/script";
+import Recaptcha from 'react-recaptcha'
 
 export default function Contact() {
     const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
@@ -97,6 +97,9 @@ export default function Contact() {
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value })
     }
+    const verifyCallback = (response) => {
+        console.log(response);
+    }
     return (
         <Layout>
             <Script src="https://www.google.com/recaptcha/api.js" async defer></Script>
@@ -138,10 +141,9 @@ export default function Contact() {
                             placeholder="Message"
                             value={toSend.message}
                             onChange={handleChange} />
-                        <ReCAPTCHA
-                            ref={recaptchaRef}
+                        <Recaptcha
                             sitekey={siteKey}
-                        />
+                            verifyCallback={verifyCallback} />
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
