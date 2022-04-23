@@ -446,7 +446,7 @@ aside>ul>li>a:hover svg{
   z-index: 2;
 }
 #skill-list{
-  margin-top: 10px;
+  margin: 10px 0;
 }
 #skill-list>ul{
   list-style: none;
