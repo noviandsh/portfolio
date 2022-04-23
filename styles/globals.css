@@ -616,11 +616,15 @@ main::after{
   #hamburger {
     right: 10px;
   }
+  #contact-detail.keyboard-show{
+    display: none;
+  }
   #contact-form.keyboard-show{
     position: fixed;
     z-index: 999;
     background-color: #19253b;
     inset: 10px;
+    top: 80px;
     width: unset;
     height: unset;
   }

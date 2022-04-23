@@ -106,7 +106,7 @@ export default function Contact() {
     return (
         <Layout>
             <div id="contact-container">
-                <div id="contact-detail">
+                <div id="contact-detail" className={isInputFocus && "keyboard-show"}>
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
                     <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please contact me on Email or Telegram below.</motion.p>
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
