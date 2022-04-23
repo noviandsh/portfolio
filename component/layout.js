@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                 <meta name="twitter:image:src" content="https://noviandsh.com/images/thumb.png"></meta>
 
                 <link rel="icon" href="/images/logo.png" />
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
             </Head>
             <Nav className="phone" />
             <Header className={isNavOpen ? "nav-open" : ""} handleNavOpen={handleNavOpen} />

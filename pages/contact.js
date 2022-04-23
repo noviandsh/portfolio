@@ -7,6 +7,7 @@ import { useState, useRef } from "react";
 import { send } from "emailjs-com"
 import { ReCAPTCHA } from "react-google-recaptcha";
 import Swal from "sweetalert2";
+import Script from "next/script";
 
 export default function Contact() {
     const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
@@ -98,6 +99,7 @@ export default function Contact() {
     }
     return (
         <Layout>
+            <Script src="https://www.google.com/recaptcha/api.js" async defer></Script>
             <div id="contact-container">
                 <div id="contact-detail">
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
@@ -136,7 +138,10 @@ export default function Contact() {
                             placeholder="Message"
                             value={toSend.message}
                             onChange={handleChange} />
-                        <div className="g-recaptcha" data-sitekey={siteKey}></div>
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={siteKey}
+                        />
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
