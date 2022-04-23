@@ -616,7 +616,14 @@ main::after{
   #hamburger {
     right: 10px;
   }
-
+  #contact-form.keyboard-show{
+    position: fixed;
+    z-index: 999;
+    background-color: #19253b;
+    inset: 10px;
+    width: unset;
+    height: unset;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

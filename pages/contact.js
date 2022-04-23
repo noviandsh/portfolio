@@ -15,6 +15,7 @@ export default function Contact() {
         TEMPLATE_ID: "template_2mjgdtt",
         PUBLIC_KEY: "TCru4-klmCI1H8254"
     }
+    const [isInputFocus, setIsInputFocus] = useState(false)
     const [toSend, setToSend] = useState({
         from_name: '',
         from_email: '',
@@ -118,7 +119,7 @@ export default function Contact() {
 
                     </motion.div>
                 </div>
-                <motion.div id="contact-form" initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
+                <motion.div id="contact-form" className={isInputFocus && "keyboard-show"} initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
                     <form onSubmit={handleFormSubmit}>
                         <input
                             type="text"
@@ -126,14 +127,18 @@ export default function Contact() {
                             id="name"
                             placeholder="Name"
                             value={toSend.from_name}
-                            onChange={handleChange} />
+                            onChange={handleChange}
+                            onFocus={() => setIsInputFocus(true)}
+                            onBlur={() => setIsInputFocus(false)} />
                         <input
                             type="email"
                             name="from_email"
                             id="email"
                             placeholder="Email"
                             value={toSend.from_email}
-                            onChange={handleChange} />
+                            onChange={handleChange}
+                            onFocus={() => setIsInputFocus(true)}
+                            onBlur={() => setIsInputFocus(false)} />
                         <textarea
                             type="message"
                             name="message"
@@ -141,7 +146,9 @@ export default function Contact() {
                             rows={5}
                             placeholder="Message"
                             value={toSend.message}
-                            onChange={handleChange} />
+                            onChange={handleChange}
+                            onFocus={() => setIsInputFocus(true)}
+                            onBlur={() => setIsInputFocus(false)} />
                         <ReCAPTCHA
                             theme="dark"
                             sitekey={siteKey}
