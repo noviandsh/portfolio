@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPaperPlane, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { useState, createRef } from "react";
+import { useState, useRef } from "react";
 import { send } from "emailjs-com"
 import { ReCAPTCHA } from "react-google-recaptcha";
 import Swal from "sweetalert2";
 
 export default function Contact() {
     const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
-    const recaptchaRef = createRef()
+    const recaptchaRef = useRef(null)
     const emailjs = {
         SERVICE_ID: "service_d3bxq4s",
         TEMPLATE_ID: "template_2mjgdtt",
@@ -47,10 +47,10 @@ export default function Contact() {
             opacity: 1, y: 0, transition: { delay: delay }
         },
     })
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault()
-        const recaptchaValue = recaptchaRef.current.getValue()
-        const params = { ...toSend, 'g-recaptcha-response': recaptchaValue }
+        const recaptchaValue = await recaptchaRef.current.getValue()
+        const params = await { ...toSend, 'g-recaptcha-response': recaptchaValue }
         if (toSend.from_name.trim() === "" || toSend.from_email.trim() === "" || toSend.message.trim() === "") {
             Swal.fire({
                 icon: 'error',
@@ -68,7 +68,7 @@ export default function Contact() {
                     Swal.showLoading()
                 }
             })
-            send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, params, emailjs.PUBLIC_KEY)
+            await send(emailjs.SERVICE_ID, emailjs.TEMPLATE_ID, params, emailjs.PUBLIC_KEY)
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
