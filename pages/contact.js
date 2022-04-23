@@ -136,9 +136,7 @@ export default function Contact() {
                             placeholder="Message"
                             value={toSend.message}
                             onChange={handleChange} />
-                        <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey={siteKey} />
+                        <div className="g-recaptcha" data-sitekey={siteKey}></div>
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>
                     </form>
                 </motion.div>
