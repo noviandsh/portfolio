@@ -143,6 +143,7 @@ export default function Contact() {
                             value={toSend.message}
                             onChange={handleChange} />
                         <ReCAPTCHA
+                            theme="dark"
                             sitekey={siteKey}
                             onChange={captchaChange} />
                         <button type="submit" className="styled-btn" style={{ padding: '10px 105px 10px 80px' }}>Send <FontAwesomeIcon icon={faPlay} /></button>

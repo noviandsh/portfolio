@@ -542,7 +542,7 @@ aside>ul>li>a:hover svg{
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  height: 95%;
+  height: 100%;
   max-width: 1366px;
   margin: 0 auto;
   gap: 20px
@@ -551,11 +551,11 @@ aside>ul>li>a:hover svg{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin: 0 0 0 30px;
   padding-right: 60px;
   width: 100%;
-  height: 50%;
+  height: 40%;
 }
 #contact-link{
   display: flex;
@@ -566,7 +566,7 @@ aside>ul>li>a:hover svg{
   box-shadow: 0px 0px 20px 0px #000;
   padding: 0 20px;
   width: 100%;
-  height: 50%;
+  height: 60%;
 }
 #contact-form>form{
   display: flex;
@@ -664,8 +664,12 @@ main::after{
   #image-list.zoom>ul>li{
     width: 17%;
   }
+  #contact-container{
+    height: 95%;
+  }
   #contact-detail{
     height: 40%;
+    gap: 20px;
   }
   .styled-btn.phone{
     display: none;
