@@ -19,13 +19,13 @@ export default function Layout({ children }) {
         <>
             <Head>
                 <title>{capitalizeFirstChar(pageName)} - Novian D Syahrizal</title>
-                <meta name="description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
+                <meta name="description" content="My name is Novian Dwi Syahrizal Hilmi but usually known as Rizal and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things." />
 
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content="https://noviandsh.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Novian D Syahrizal - Frontend Dev" />
-                <meta property="og:description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
+                <meta property="og:description" content="My name is Novian Dwi Syahrizal Hilmi but usually known as Rizal and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things." />
                 <meta property="og:image" content="/images/thumb.png" />
 
                 {/* Twitter Meta Tags */}
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
                 <meta property="twitter:domain" content="noviandsh.com" />
                 <meta property="twitter:url" content="https://noviandsh.com/" />
                 <meta name="twitter:title" content="Novian D Syahrizal - Frontend Dev" />
-                <meta name="twitter:description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
+                <meta name="twitter:description" content="My name is Novian Dwi Syahrizal Hilmi but usually known as Rizal and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things." />
                 <meta name="twitter:image:src" content="https://noviandsh.com/images/thumb.png"></meta>
 
                 <meta name="google-site-verification" content="KhyJI40UHcCIwipEMPFS5az8APstVqL7IUiIPEG9fLI" />
