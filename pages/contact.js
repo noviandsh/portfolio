@@ -108,7 +108,7 @@ export default function Contact() {
             <div id="contact-container">
                 <div id="contact-detail" className={isInputFocus ? "keyboard-show" : ''}>
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
-                    <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please contact me on Email or <span className="contact-no-phone">Telegram</span><span className="contact-phone">social media</span> below.</motion.p>
+                    <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please send me a message or contact me on Email or <span className="contact-no-phone">Telegram</span><span className="contact-phone">social media</span> below.</motion.p>
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
                         <a href="mailto:noviandsh@gmail.com" className="styled-btn"><span className="contact-phone">Email</span> <span className="contact-no-phone">noviandsh@gmail.com</span> <FontAwesomeIcon icon={faEnvelope} /></a>
                         <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
