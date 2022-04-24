@@ -106,20 +106,19 @@ export default function Contact() {
     return (
         <Layout>
             <div id="contact-container">
-                <div id="contact-detail" className={isInputFocus && "keyboard-show"}>
+                <div id="contact-detail" className={isInputFocus ? "keyboard-show" : ''}>
                     <motion.h1 initial="initialSlideDown" animate="animateSlideDown" variants={variants(.2)}>Get in touch.</motion.h1>
-                    <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please contact me on Email or Telegram below.</motion.p>
+                    <motion.p initial="initialSlideRight" animate="animateSlideRight" variants={variants(.4)}>If you wanna talk about work or just wanna talk with me, please contact me on Email or <span className="contact-no-phone">Telegram</span><span className="contact-phone">social media</span> below.</motion.p>
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
-                        <a href="mailto:noviandsh@gmail.com" className="styled-btn">noviandsh@gmail.com <FontAwesomeIcon icon={faEnvelope} /></a>
+                        <a href="mailto:noviandsh@gmail.com" className="styled-btn"><span className="contact-phone">Email</span> <span className="contact-no-phone">noviandsh@gmail.com</span> <FontAwesomeIcon icon={faEnvelope} /></a>
                         <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
+                        <a href="https://www.linkedin.com/in/novian-dwi-syahrizal-hilmi/" target="_blank" rel="noreferrer" className="styled-btn phone">LinkedIn <FontAwesomeIcon icon={faLinkedin} /></a>
                         <a href="https://github.com/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Github <FontAwesomeIcon icon={faGithub} /></a>
                         <a href="https://www.facebook.com/noviandsh/" target="_blank" rel="noreferrer" className="styled-btn phone">Facebook <FontAwesomeIcon icon={faFacebookF} /></a>
                         <a href="https://twitter.com/noviandsh_" target="_blank" rel="noreferrer" className="styled-btn phone">Twitter <FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href="https://www.linkedin.com/in/novian-dwi-syahrizal-hilmi/" target="_blank" rel="noreferrer" className="styled-btn phone">LinkedIn <FontAwesomeIcon icon={faLinkedin} /></a>
-
                     </motion.div>
                 </div>
-                <motion.div id="contact-form" className={isInputFocus && "keyboard-show"} initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
+                <motion.div id="contact-form" className={isInputFocus ? "keyboard-show" : ''} initial="initialZoom" animate="animateZoom" variants={variants(.2)}>
                     <form onSubmit={handleFormSubmit}>
                         <input
                             type="text"

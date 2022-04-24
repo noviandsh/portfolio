@@ -394,7 +394,7 @@ aside>ul>li>a:hover svg{
   cursor: pointer;
   text-decoration: none;
   background: #bfbfbf;
-  color: #1a2232;
+  color: var(--sub-color);
   border-radius: 20px;
   padding: 10px 65px 10px 20px;
   position: relative;
@@ -404,6 +404,10 @@ aside>ul>li>a:hover svg{
   font-size: .85em;
   border: 2px solid #bfbfbf;
   margin-top: 5px;
+}
+
+.styled-btn > span {
+  color: var(--sub-color);
 }
 
 .styled-btn > svg {
@@ -550,12 +554,13 @@ aside>ul>li>a:hover svg{
 #contact-detail {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   margin: 0 0 0 30px;
   padding-right: 60px;
   width: 100%;
   height: 40%;
+  overflow-y: scroll;
 }
 #contact-link{
   display: flex;
@@ -564,7 +569,7 @@ aside>ul>li>a:hover svg{
 }
 #contact-form{
   box-shadow: 0px 0px 20px 0px #000;
-  padding: 0 20px;
+  padding: 20px;
   width: 100%;
   height: 60%;
 }
@@ -600,12 +605,8 @@ aside>ul>li>a:hover svg{
   border-radius: 5px;
   cursor: pointer;
 }
-main::after{
-  /* content: '0'; */
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 2em;
+.contact-phone{
+  display: none;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -627,6 +628,12 @@ main::after{
     top: 80px;
     width: unset;
     height: unset;
+  }
+  .contact-no-phone{
+    display: none;
+  }
+  .contact-phone{
+    display: unset;
   }
 }
 
