@@ -36,6 +36,8 @@ export default function Layout({ children }) {
                 <meta name="twitter:description" content="Hi, my name is Novian Dwi Syahrizal Hilmi and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects." />
                 <meta name="twitter:image:src" content="https://noviandsh.com/images/thumb.png"></meta>
 
+                <meta name="google-site-verification" content="KhyJI40UHcCIwipEMPFS5az8APstVqL7IUiIPEG9fLI" />
+
                 <link rel="icon" href="/images/logo.png" />
 
             </Head>
