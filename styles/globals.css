@@ -560,7 +560,6 @@ aside>ul>li>a:hover svg{
   padding-right: 60px;
   width: 100%;
   height: 40%;
-  overflow-y: scroll;
 }
 #contact-link{
   display: flex;
@@ -616,6 +615,9 @@ aside>ul>li>a:hover svg{
   }
   #hamburger {
     right: 10px;
+  }
+  #contact-detail{
+    overflow-y: scroll;
   }
   #contact-detail.keyboard-show{
     display: none;
