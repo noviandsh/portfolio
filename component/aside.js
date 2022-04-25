@@ -22,7 +22,7 @@ export default function Aside() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/novian-dwi-syahrizal-hilmi/" target="_blank" rel="noreferrer" >
+                    <a href="https://www.linkedin.com/in/noviandsh/" target="_blank" rel="noreferrer" >
                         <FontAwesomeIcon icon={faLinkedin} size="xl" />
                     </a>
                 </li>

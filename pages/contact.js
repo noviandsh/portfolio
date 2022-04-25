@@ -112,7 +112,7 @@ export default function Contact() {
                     <motion.div id="contact-link" initial="initialSlideUp" animate="animateSlideUp" variants={variants(.6)}>
                         <a href="mailto:noviandsh@gmail.com" className="styled-btn"><span className="contact-phone">Email</span> <span className="contact-no-phone">noviandsh@gmail.com</span> <FontAwesomeIcon icon={faEnvelope} /></a>
                         <a href="https://t.me/noviandsh" target="_blank" rel="noreferrer" className="styled-btn">Telegram <FontAwesomeIcon icon={faPaperPlane} /></a>
-                        <a href="https://www.linkedin.com/in/novian-dwi-syahrizal-hilmi/" target="_blank" rel="noreferrer" className="styled-btn phone">LinkedIn <FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a href="https://www.linkedin.com/in/noviandsh/" target="_blank" rel="noreferrer" className="styled-btn phone">LinkedIn <FontAwesomeIcon icon={faLinkedin} /></a>
                         <a href="https://github.com/noviandsh" target="_blank" rel="noreferrer" className="styled-btn phone">Github <FontAwesomeIcon icon={faGithub} /></a>
                         <a href="https://www.facebook.com/noviandsh/" target="_blank" rel="noreferrer" className="styled-btn phone">Facebook <FontAwesomeIcon icon={faFacebookF} /></a>
                         <a href="https://twitter.com/noviandsh_" target="_blank" rel="noreferrer" className="styled-btn phone">Twitter <FontAwesomeIcon icon={faTwitter} /></a>
