@@ -6,7 +6,7 @@ import { faDownload, faCode } from '@fortawesome/free-solid-svg-icons'
 import { faReact, faNodeJs, faAndroid } from '@fortawesome/free-brands-svg-icons'
 
 export default function About() {
-    const cvLink = "#"
+    const cvLink = "https://drive.google.com/file/d/1MFAE-pMgLaWJW22vliDWvfVl2opmOOZd/view?usp=sharing"
     const variants = (delay) => ({
         initialZoom: {
             opacity: 0, scale: .1
