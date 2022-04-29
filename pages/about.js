@@ -50,7 +50,7 @@ export default function About() {
                             <li><span>ExpressJs</span></li>
                         </ul>
                     </div>
-                    <a href={cvLink} className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
+                    <a target="_blank" href={cvLink} className='styled-btn'>Download Resume <FontAwesomeIcon icon={faDownload} /></a>
                 </motion.div>
                 <div id='my-photo'>
                     <motion.div initial="initialSlideUp" animate="animateSlideUp" variants={variants(.4)} id="photo-circle">
