@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --main-color:#009688;
-  --sub-color:#1a212e;
+  --main-color: #009688;
+  --sub-color: #1a212e;
 }
 
 html,
 body {
-  width: 100vw;  
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #0f1520;
@@ -26,7 +26,8 @@ a {
   font-family: "Montserrat", sans-serif;
   /* outline: 1px solid red; */
 }
-#__next {  
+
+#__next {
   width: 100%;
   height: 100%;
 }
@@ -42,6 +43,7 @@ header {
   z-index: 999;
   transition: .5s transform;
 }
+
 #hamburger {
   height: 50px;
   width: 50px;
@@ -57,7 +59,9 @@ header {
   cursor: pointer;
 }
 
-#hamburger>span, #hamburger>span::before, #hamburger>span::after {
+#hamburger>span,
+#hamburger>span::before,
+#hamburger>span::after {
   display: block;
   background-color: #bfbfbf;
   height: 4px;
@@ -97,12 +101,14 @@ header {
   transform: rotateZ(-45deg);
   width: 34px;
 }
+
 #logo {
   font-size: 40px;
   font-weight: 300;
   color: var(--main-color);
 }
-nav.phone{
+
+nav.phone {
   position: absolute;
   top: 50px;
   right: 20px;
@@ -110,22 +116,28 @@ nav.phone{
   text-align: right;
   font-size: 1.3em;
 }
-nav.phone>ul>li{
+
+nav.phone>ul>li {
   list-style: none;
   margin-bottom: 20px;
 }
-nav.main{
+
+nav.main {
   display: none;
 }
-nav.main>ul>li{
+
+nav.main>ul>li {
   display: inline-block;
   list-style: none;
 }
-nav>ul>li>a{
+
+nav>ul>li>a {
   padding: 10px 20px;
   text-decoration: none;
 }
-nav>ul>li>a:hover, nav>ul>li>a.active{
+
+nav>ul>li>a:hover,
+nav>ul>li>a.active {
   color: var(--main-color);
 }
 
@@ -141,7 +153,9 @@ main {
   box-shadow: 5px -3px 20px 0px black;
   transition: .5s transform;
 }
-main.nav-open, header.nav-open{
+
+main.nav-open,
+header.nav-open {
   transform: translate(-200px, 20px);
 }
 
@@ -154,18 +168,22 @@ aside {
   bottom: 100px;
   z-index: 999;
 }
-aside>ul>li{
+
+aside>ul>li {
   list-style: none;
   margin-bottom: 20px;
 }
-aside>ul>li>a{
+
+aside>ul>li>a {
   padding: 10px 20px;
   text-decoration: none;
 }
-aside>ul>li>a svg{
+
+aside>ul>li>a svg {
   transition: transform .5s;
 }
-aside>ul>li>a:hover svg{
+
+aside>ul>li>a:hover svg {
   transform: translateX(10px);
 }
 
@@ -182,9 +200,11 @@ aside>ul>li>a:hover svg{
   align-content: center;
   margin-top: -30px;
 }
-#greeting>span{
+
+#greeting>span {
   margin-left: 3px;
 }
+
 #greeting>h1 {
   color: var(--main-color);
   font-weight: 500;
@@ -200,36 +220,41 @@ aside>ul>li>a:hover svg{
   /* outline: 1px solid red; */
 }
 
-#page-indicator>ul{
+#page-indicator>ul {
   list-style: none;
 }
-#page-indicator>ul>li{
+
+#page-indicator>ul>li {
   display: inline-block;
   width: 25%;
 }
-#page-indicator>ul>li>a{
+
+#page-indicator>ul>li>a {
   display: block;
   border-bottom: 2px solid var(--main-color);
   padding: 5px 10px;
   margin: 0 5px;
   transition: border .2s;
 }
-#page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
+
+#page-indicator>ul>li>a:hover,
+#page-indicator>ul>li>a.active {
   border-bottom-width: 6px;
 }
 
-#portfolios{
+#portfolios {
   height: 100%;
   padding-top: 20px;
 }
 
-#portfolio-view{
+#portfolio-view {
   display: flex;
   justify-content: center;
   height: 65%;
   margin-bottom: 35px;
 }
-#project-card{
+
+#project-card {
   position: absolute;
   background: #1a2232;
   height: 100%;
@@ -241,14 +266,16 @@ aside>ul>li>a:hover svg{
   padding: 10px 20px;
   box-shadow: 0 0 16px 0px rgb(0 0 0);
 }
-#project-card.zoom{
+
+#project-card.zoom {
   height: 94%;
   width: 97%;
   top: 20px;
   z-index: 9999;
   transition: inset .5s;
 }
-#project-card>#close-btn{
+
+#project-card>#close-btn {
   position: absolute;
   background-color: transparent;
   border: 0;
@@ -257,51 +284,61 @@ aside>ul>li>a:hover svg{
   top: 10px;
   right: 20px;
 }
+
 #project-image {
   position: relative;
   height: 90%;
   width: 100%;
 }
-#project-card.zoom>#project-image{
+
+#project-card.zoom>#project-image {
   height: 40%;
 }
-#project-detail.zoom{
+
+#project-detail.zoom {
   width: 100%;
   height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 #project-info {
   max-height: 65%;
 }
+
 #project-description {
   border-left: 4px solid var(--main-color);
   padding-left: 10px;
   margin-top: 10px;
 }
+
 #project-description>p {
   direction: ltr;
 }
+
 #project-description::-webkit-scrollbar {
   width: 8px;
   background-color: #111111;
 }
+
 #project-description::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 5px;
 }
-#project-stack{
+
+#project-stack {
   margin-top: 10px;
   font-weight: 600;
 }
+
 #project-link {
   display: flex;
   gap: 10px;
   margin-top: 5px;
 }
 
-.project-button{
+.project-button {
   display: none;
   background-color: #1a2232;
   border: 0;
@@ -313,15 +350,18 @@ aside>ul>li>a:hover svg{
   transform: translateY(-50%);
   transition: font-size .2s;
 }
-.project-button:hover{
+
+.project-button:hover {
   font-size: 20px;
 }
-.project-button.left{
+
+.project-button.left {
   left: -30px;
   box-shadow: -3px 0 11px 0px rgb(0 0 0);
   border-radius: 5px 0 0 5px;
 }
-.project-button.left::after{
+
+.project-button.left::after {
   content: '';
   display: block;
   width: 10px;
@@ -331,12 +371,14 @@ aside>ul>li>a:hover svg{
   right: -10px;
   top: 0;
 }
-.project-button.right{
+
+.project-button.right {
   right: -30px;
   box-shadow: 3px 0 11px 0px rgb(0 0 0);
   border-radius: 0 5px 5px 0;
 }
-.project-button.right::after{
+
+.project-button.right::after {
   content: '';
   display: block;
   width: 10px;
@@ -347,7 +389,7 @@ aside>ul>li>a:hover svg{
   top: 0;
 }
 
-#image-list{
+#image-list {
   width: 95%;
   height: 25%;
   /* outline: 1px solid red; */
@@ -357,6 +399,7 @@ aside>ul>li>a:hover svg{
   margin: 0 auto;
   box-shadow: 0 0 16px 0px rgb(0 0 0);
 }
+
 #image-list::-webkit-scrollbar {
   height: 8px;
   background-color: #111111;
@@ -366,12 +409,14 @@ aside>ul>li>a:hover svg{
   background-color: var(--main-color);
   border-radius: 5px;
 }
-#image-list>ul{ 
+
+#image-list>ul {
   height: 100%;
   list-style: none;
   white-space: nowrap;
 }
-#image-list>ul>li{
+
+#image-list>ul>li {
   position: relative;
   height: 100%;
   display: inline-block;
@@ -379,13 +424,16 @@ aside>ul>li>a:hover svg{
   cursor: pointer;
   width: 30%;
 }
-#image-list.zoom>ul>li{
+
+#image-list.zoom>ul>li {
   width: 25%;
 }
-#image-list>ul>li:first-child{
+
+#image-list>ul>li:first-child {
   margin-left: 20px;
 }
-#image-list.zoom{
+
+#image-list.zoom {
   width: 95%;
   margin: 0;
 }
@@ -406,16 +454,17 @@ aside>ul>li>a:hover svg{
   margin-top: 5px;
 }
 
-.styled-btn > span {
+.styled-btn>span {
   color: var(--sub-color);
 }
 
-.styled-btn > svg {
+.styled-btn>svg {
   position: absolute;
   right: 15px;
   top: 9px;
   font-size: 1.3em;
 }
+
 .styled-btn::before {
   content: "";
   position: absolute;
@@ -440,6 +489,7 @@ aside>ul>li>a:hover svg{
   max-width: 1366px;
   margin: 0 auto;
 }
+
 #about-description {
   display: flex;
   flex-direction: column;
@@ -449,13 +499,16 @@ aside>ul>li>a:hover svg{
   gap: 10px;
   z-index: 2;
 }
-#skill-list{
+
+#skill-list {
   margin: 10px 0;
 }
-#skill-list>ul{
+
+#skill-list>ul {
   list-style: none;
 }
-#skill-list>ul>li{
+
+#skill-list>ul>li {
   position: relative;
   display: inline-block;
   background-color: var(--main-color);
@@ -464,15 +517,18 @@ aside>ul>li>a:hover svg{
   padding: 2px 0 2px 10px;
   margin-top: 10px;
 }
-#skill-list>ul>li>span{
+
+#skill-list>ul>li>span {
   display: block;
   background-color: var(--sub-color);
   /* color: var(--main-color); */
   padding: 5px 10px;
 }
-#skill-list>ul>li:not(:last-child){
+
+#skill-list>ul>li:not(:last-child) {
   margin-right: 10px;
 }
+
 #my-photo {
   position: absolute;
   z-index: 1;
@@ -481,7 +537,8 @@ aside>ul>li>a:hover svg{
   flex-direction: column;
   justify-content: center;
 }
-.image-cut{
+
+.image-cut {
   position: absolute;
   top: -112px;
   right: -70px;
@@ -494,10 +551,12 @@ aside>ul>li>a:hover svg{
   justify-content: flex-end;
   align-items: center;
 }
-.image-cut>div{
+
+.image-cut>div {
   width: 68%;
   height: 100%;
 }
+
 #photo-circle {
   position: relative;
   width: 350px;
@@ -505,13 +564,15 @@ aside>ul>li>a:hover svg{
   border: 70px solid var(--main-color);
   border-radius: 50%;
 }
-#photo-circle img{
+
+#photo-circle img {
   /* position: absolute; */
   width: 68%;
   margin-bottom: -15px;
   filter: brightness(0.8) drop-shadow(2px 4px 6px black);
 }
-.circle-skils{
+
+.circle-skils {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -522,26 +583,30 @@ aside>ul>li>a:hover svg{
   background-color: #1a212e;
   border-radius: 50%;
 }
-.circle-skils:nth-child(1){
+
+.circle-skils:nth-child(1) {
   top: 40px;
   left: -100px;
 }
-.circle-skils:nth-child(2){
+
+.circle-skils:nth-child(2) {
   top: -60px;
   left: -30px;
 }
-.circle-skils:nth-child(3){
+
+.circle-skils:nth-child(3) {
   top: -60px;
   right: -30px;
 }
-.circle-skils:nth-child(4){
+
+.circle-skils:nth-child(4) {
   top: 40px;
   right: -100px;
 }
 
 /* CONTACT */
 
-#contact-container{
+#contact-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -551,6 +616,7 @@ aside>ul>li>a:hover svg{
   margin: 0 auto;
   gap: 20px
 }
+
 #contact-detail {
   display: flex;
   flex-direction: column;
@@ -561,18 +627,21 @@ aside>ul>li>a:hover svg{
   width: 100%;
   height: 40%;
 }
-#contact-link{
+
+#contact-link {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
-#contact-form{
+
+#contact-form {
   box-shadow: 0px 0px 20px 0px #000;
   padding: 20px;
   width: 100%;
   height: 60%;
 }
-#contact-form>form{
+
+#contact-form>form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -580,7 +649,9 @@ aside>ul>li>a:hover svg{
   gap: 25px;
   height: 100%;
 }
-#contact-form input, #contact-form textarea{
+
+#contact-form input,
+#contact-form textarea {
   background-color: transparent;
   border: 2px solid #bfbfbf;
   border-radius: 7px;
@@ -590,10 +661,13 @@ aside>ul>li>a:hover svg{
   font-weight: 600;
   resize: none;
 }
-#contact-form input:focus, #contact-form textarea:focus{
+
+#contact-form input:focus,
+#contact-form textarea:focus {
   border-color: var(--main-color);
   outline: 0;
 }
+
 #contact-form textarea::-webkit-scrollbar {
   width: 8px;
   background-color: transparent;
@@ -604,7 +678,8 @@ aside>ul>li>a:hover svg{
   border-radius: 5px;
   cursor: pointer;
 }
-.contact-phone{
+
+.contact-phone {
   display: none;
 }
 
@@ -613,16 +688,20 @@ aside>ul>li>a:hover svg{
   header {
     padding: 0 10px;
   }
+
   #hamburger {
     right: 10px;
   }
-  #contact-detail{
+
+  #contact-detail {
     overflow-y: scroll;
   }
-  #contact-detail.keyboard-show{
+
+  #contact-detail.keyboard-show {
     display: none;
   }
-  #contact-form.keyboard-show{
+
+  #contact-form.keyboard-show {
     position: fixed;
     z-index: 999;
     background-color: #19253b;
@@ -631,10 +710,12 @@ aside>ul>li>a:hover svg{
     width: unset;
     height: unset;
   }
-  .contact-no-phone{
+
+  .contact-no-phone {
     display: none;
   }
-  .contact-phone{
+
+  .contact-phone {
     display: unset;
   }
 }
@@ -644,54 +725,69 @@ aside>ul>li>a:hover svg{
   header {
     padding: 0 20px;
   }
-  #hamburger{
+
+  #hamburger {
     display: block;
   }
-  aside{
+
+  aside {
     display: block;
   }
-  #page-indicator{
+
+  #page-indicator {
     right: 40px;
     bottom: 30px;
     left: unset;
   }
-  #page-indicator>ul>li{
+
+  #page-indicator>ul>li {
     display: block;
     margin-bottom: 20px;
     width: unset;
   }
-  #page-indicator>ul>li>a{
+
+  #page-indicator>ul>li>a {
     display: unset;
     border-right: 2px solid var(--main-color);
     border-bottom: 0;
     margin: 0;
   }
-  #page-indicator>ul>li>a:hover, #page-indicator>ul>li>a.active{
+
+  #page-indicator>ul>li>a:hover,
+  #page-indicator>ul>li>a.active {
     border-right-width: 6px;
   }
-  main{
+
+  main {
     padding: 130px 80px 0;
   }
+
   #greeting {
     margin-top: -80px;
   }
-  #portfolios{
+
+  #portfolios {
     height: 95%;
   }
-  .project-button{
+
+  .project-button {
     display: unset;
   }
-  #image-list.zoom>ul>li{
+
+  #image-list.zoom>ul>li {
     width: 17%;
   }
-  #contact-container{
+
+  #contact-container {
     height: 95%;
   }
-  #contact-detail{
+
+  #contact-detail {
     height: 40%;
     gap: 20px;
   }
-  .styled-btn.phone{
+
+  .styled-btn.phone {
     display: none;
   }
 }
@@ -702,21 +798,26 @@ aside>ul>li>a:hover svg{
     margin-top: 20px;
     padding: 0 50px;
   }
-  nav.main{
+
+  nav.main {
     display: block;
   }
-  #hamburger{
+
+  #hamburger {
     display: none;
   }
-  #contact-container{
+
+  #contact-container {
     flex-direction: row;
   }
-  #contact-detail{
+
+  #contact-detail {
     height: unset;
     width: 50%;
     margin-top: -80px;
   }
-  #contact-form{
+
+  #contact-form {
     height: unset;
     width: 50%;
     padding: 50px 40px;
@@ -728,51 +829,64 @@ aside>ul>li>a:hover svg{
   #about-container {
     flex-direction: row;
   }
+
   #about-description {
     margin: -100px 65px 0 25px;
   }
-  #my-photo{
+
+  #my-photo {
     position: relative;
     z-index: 1;
     filter: unset;
   }
+
   #photo-circle {
     width: 450px;
     height: 450px;
   }
-  #project-card.zoom{
+
+  #project-card.zoom {
     flex-direction: row;
     gap: 20px;
   }
-  #project-detail.zoom{
+
+  #project-detail.zoom {
     width: 40%;
     height: 95%;
     justify-content: space-around;
   }
+
   #project-card.zoom #project-image {
     height: 95%;
     width: 60%;
   }
-  #project-description, #project-stack, #project-link {
+
+  #project-description,
+  #project-stack,
+  #project-link {
     margin-top: 15px;
   }
-  #image-list.zoom>ul>li{
+
+  #image-list.zoom>ul>li {
     width: 60%;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  #project-card{
+  #project-card {
     width: 50%;
   }
-  #image-list{
+
+  #image-list {
     width: 85%;
   }
-  #image-list>ul>li{
+
+  #image-list>ul>li {
     width: 15%;
   }
-  #image-list.zoom>ul>li{
+
+  #image-list.zoom>ul>li {
     width: 40%;
   }
 }
