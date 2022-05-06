@@ -516,6 +516,13 @@ aside>ul>li>a:hover svg {
   font-size: 0.85em;
   padding: 2px 0 2px 10px;
   margin-top: 10px;
+  transition: .5s padding;
+  cursor: default;
+}
+
+#skill-list>ul>li:hover {
+  padding-left: 2px;
+  padding-right: 8px;
 }
 
 #skill-list>ul>li>span {
