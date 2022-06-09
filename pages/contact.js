@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
-    const siteKey = "6LeINJIfAAAAAI3IznqkabRVk1c2gTfIi4KrBwXB"
+    const siteKey = "6LfQK1cgAAAAANfMwdPGj5rSs9psuJfD5WKbMygn"
     const emailjs = {
         SERVICE_ID: "service_d3bxq4s",
         TEMPLATE_ID: "template_2mjgdtt",
