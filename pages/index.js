@@ -53,7 +53,7 @@ export default function Home() {
 					<motion.h1 key="name" initial="hidden" animate="visible" exit="hidden" variants={variants.h1}>
 						Novian Dwi Syahrizal Hilmi.
 					</motion.h1>
-					<motion.span key="works" initial="hidden" animate="visible" variants={variants.span2}>a Front-End Developer</motion.span>
+					<motion.span key="works" initial="hidden" animate="visible" variants={variants.span2}>a Teacher & a Front-End Developer</motion.span>
 				</AnimatePresence>
 			</div>
 		</Layout>

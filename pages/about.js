@@ -32,7 +32,7 @@ export default function About() {
             <div id="about-container">
                 <motion.div initial="initialSlideRight" animate="animateSlideRight" variants={variants(.2)} id='about-description'>
                     <h1>About me</h1>
-                    <p>Hi, my name is Novian Dwi Syahrizal Hilmi but usually known as Rizal and currently live in Gresik, Indonesia. I am a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things.</p>
+                    <p>Hi, my name is Novian Dwi Syahrizal Hilmi but usually known as Rizal and currently live in Gresik, Indonesia. I am a Teacher & a Frontend Developer and sometimes become a Fullstack while working on a freelance projects. I always like to learn new things, especially about programming and computer things.</p>
                     <div id="skill-list">
                         <h2>Skills</h2>
                         <ul>
