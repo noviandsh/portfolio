@@ -576,7 +576,7 @@ aside>ul>li>a:hover svg {
   /* position: absolute; */
   width: 68%;
   margin-bottom: -15px;
-  filter: brightness(0.8) drop-shadow(2px 4px 6px black) blur(3px);
+  /* filter: brightness(0.8) drop-shadow(2px 4px 6px black) blur(3px); */
 }
 
 .circle-skils {
